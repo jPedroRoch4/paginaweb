@@ -1,74 +1,28 @@
-<script>
+<script type="module">
 
+    // Importa a classe 'Animal'.
+    import { Animal } from './Animal.class.js'
 
-    class Animal {
+    // Importa a classe 'Mamifero'.
+    import { Mamifero } from './Mamifero.class.js'
 
-        #nome = ''
-        #especie = ''
-        #familia
-        #nascimento
-        #metrica = {}
+    // Importa a classe 'Mamifero'.
+    import { Artropode } from './Artropode.class.js'
 
-        constructor(nome, especie) {
-            this.#nome = nome
-            this.#especie = especie
-            document.write('Criando um bicho chamado ' + nome + '<br>')
-        }
-
-        alimentacao() { }
-        vacinar() { }
-
-        get nome() {
-            return this.#nome
-        }
-
-        get especie() {
-            return this.#especie
-        }
-
-        get familia() {
-            return this.#familia
-        }
-
-        get nascimento() {
-            return this.#nascimento
-        }
-
-        get metrica() {
-            return this.#metrica
-        }
-
-
-        set nome(nome) {
-            this.#nome = nome
-        }
-
-        set especie(especie) {
-            this.#especie = especie
-        }
-
-        set familia(familia) {
-            this.#familia = familia
-        }
-
-        set nascimento(nascimento) {
-            this.#nascimento = nascimento
-        }
-
-        set metrica(metrica) {
-            this.#metrica = metrica
-        }
-
-
-
-    }
-
-    var foca = new Animal('Fucka', 'mamifero')
+    var foca = new Animal('Fofinha', 'mamífero')
     foca.nome = 'Maria'
     console.log(foca)
+    console.log(foca.nome)
 
-
-    var formiga = new Animal('Miguinha', 'artropode')
+    var formiga = new Animal('Miguinha', 'Artropode')
     console.log(formiga)
+    console.log(formiga.nome)
 
+    var mimosa = new Mamifero('Mimosa', 'vaca', 'verde')
+    console.log(mimosa)
+    console.log(mimosa.nome)
+
+    var bazario = new Artropode('Bazario', 'Artropode')
+    console.log(bazario)
+    console.log(bazario.nome)
 </script>
